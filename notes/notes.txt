@@ -1,0 +1,31 @@
+next
+in
+D:\git\rust\taiq_rust\src\taiq\ui\gpui
+implement a ui for chat for a standalone/desktop app
+using similar approach as forgeiq webapp
+
+make a second implementation with
+**egui** &#x20;
+in&#x20;
+D:\git\rust\taiq_rust\src\taiq\ui\egui
+
+put max ui related logic and datastructures that can be made framework agnostic under D:\git\rust\taiq_rust\src\taiq\ui\common
+the idea is that the ui lib specific code shuld be a thin layer around the core ui common logic and event processing
+
+the ui
+should have left vertical toolbar, left panel, central web panel, right editors/viewer for files
+
+try to match the functionality of the forqueiq ui
+parts that dont have backend support
+output a flash error message NotImplemented
+
+use forgeiq python codebase to take inspiration for missing artifacts for implementation
+
+implement also the filestores, connectors, etc
+start by implementing local filestore
+this should allow to implement the file tree, and the chat
+implement file viewer editor for code
+
+use D:\git\rust\taiq_rust\src\taiq_ext\plugins for the extension
+once the basic functionality is in place see which plugins you can implement
+organize plugin one per module, and parrent module per category
